@@ -2,9 +2,9 @@
 var copasBrasil = [1958, 1962, 1970, 1994, 2002]
 
 // 2
-/*for(item in copasBrasil){
-  console.log(`O Brasil ganhou a copa de ${item}`)
-}*/
+for(item in copasBrasil){
+  console.log(`O Brasil ganhou a copa de ${copasBrasil[item]}`)
+}
 
 copasBrasil.forEach((item) => console.log(`O Brasil ganhou a copa de ${item}`))
 
@@ -20,6 +20,6 @@ for(var item = 0; item < frutas.length; item++){
 }
 
 // 4
-var fruta = 'Melância'
-frutas.pop()
-console.log(frutas)
+
+  var fruta = frutas[frutas.length - 1]
+  console.log(fruta)
