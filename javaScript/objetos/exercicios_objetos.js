@@ -9,7 +9,7 @@ var dadosPessoais = {
 //2
 
 dadosPessoais.mostrarNome = function(){
-    return `${dadosPessoais.nome} ${dadosPessoais.sobrenome}`
+    return `${this.nome} ${this.sobrenome}`
 }
 console.log(dadosPessoais.mostrarNome())
 
@@ -29,7 +29,14 @@ var cachorro = {
     raca: 'Labrador',
     cor: 'preto',
     idade: 10,
-    ação: 'Late ao ver um homem!'
+    ação(meliante){
+        if(meliante === 'homem'){
+            return 'latido, latido'
+        }else{
+            return 'deitado'
+        }
+
+    }
 }
 
-console.log(cachorro.ação)
+console.log(cachorro.ação('mulher'))
