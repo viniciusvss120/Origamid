@@ -41,5 +41,17 @@ const imagens = document.querySelectorAll('.animais img')
 console.log(imagens)
 
 //2
-const retornaImg = document.querySelectorAll('.animais imagem')
+const retornaImg = document.querySelectorAll('img[src^="img/imagem"]')
 console.log(retornaImg)
+
+//3
+const linksInterno = document.querySelectorAll('[href^="#"]')
+console.log(linksInterno)
+
+//4
+const h2Animais = document.querySelector('.animais-descricao h2')
+console.log(h2Animais)
+
+//5
+const paragrafos = document.querySelectorAll('p')
+console.log(paragrafos[paragrafos.length - 1])
