@@ -55,3 +55,5 @@ console.log(h2Animais)
 //5
 const paragrafos = document.querySelectorAll('p')
 console.log(paragrafos[paragrafos.length - 1])
+
+
