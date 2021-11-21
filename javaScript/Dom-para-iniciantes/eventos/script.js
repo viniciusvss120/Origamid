@@ -1,34 +1,61 @@
-const listaAnimais = document.querySelector('.animais-lista')
+/*
+const img = document.querySelector('img')
 
-const height = listaAnimais.scrollHeight
-const animaisTop = listaAnimais.offsetTop
-console.log(animaisTop)
-
-const primeiroH2 = document.querySelector('h2')
-
-const h2left= primeiroH2.offsetLeft
-
-const h2rect = primeiroH2.getBoundingClientRect()
-console.log(h2rect.top)
-
-if(h2rect.top < 0) {
-  console.log('Passou do elemento')
+function callback(event) {
+  console.log(event)
 }
 
-console.log(
-  window.innerWidth,
-  window.innerHeight,
-  window.outerWidth,
-  window.outerHeight,
-  window.pageXOffset
-)
+//img.addEventListener('click', callback)
 
-const small = window.matchMedia('(max-width: 600')
+const imagensLista = document.querySelector('.animais-lista')
 
-if(small){
-  console.log('Usúario mobile')
-}else{
-  console.log("usuario desctop")
+function callbackLista(event) {
+  console.log(event.currentTarget)
+  console.log(event.target)
+  console.log(event.type)
+  
 }
 
-console.log(small)
+//imagensLista.addEventListener('click', callbackLista)
+
+
+const linkExterno = document.querySelector('a[href^="http"]')
+
+function handleLinkExterno(event){
+  event.preventDefault()
+  console.log('clicou')
+  console.log(this)
+}
+
+linkExterno.addEventListener('click', handleLinkExterno)
+
+const h1 = document.querySelector('h1')
+
+function handleEvent(event){
+  console.log(event.type, event)
+}
+
+/*h1.addEventListener('click',handleEvent)
+h1.addEventListener('mouseenter',handleEvent)
+h1.addEventListener('mousemove',handleEvent)
+
+window.addEventListener('scroll', handleEvent)
+window.addEventListener('resize', handleEvent)*/
+
+function handleKeyboard(event) {
+  if(event.key === 'a'){
+    document.body.classList.toggle('azul')
+  }
+} 
+
+window.addEventListener('keydown', handleKeyboard)
+
+const imgs = document.querySelectorAll('img')
+
+function handleImg(event){
+  console.log(event.target.getAttribute('src'))
+}
+
+imgs.forEach((img) => {
+  img.addEventListener('click', handleImg)
+})
