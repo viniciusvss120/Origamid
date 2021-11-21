@@ -1,28 +1,34 @@
-const menu = document.querySelector('.menu')
+const listaAnimais = document.querySelector('.animais-lista')
 
-menu.classList.add('ativo')
-menu.classList.remove('azul')
-menu.classList.toggle('azul')
+const height = listaAnimais.scrollHeight
+const animaisTop = listaAnimais.offsetTop
+console.log(animaisTop)
 
-if(menu.classList.contains('azul')){
-  menu.classList.add('possui-azul')
-}else{
-  menu.classList.add('nao-possui-azul')
+const primeiroH2 = document.querySelector('h2')
+
+const h2left= primeiroH2.offsetLeft
+
+const h2rect = primeiroH2.getBoundingClientRect()
+console.log(h2rect.top)
+
+if(h2rect.top < 0) {
+  console.log('Passou do elemento')
 }
 
-//console.log(menu.classList)
+console.log(
+  window.innerWidth,
+  window.innerHeight,
+  window.outerWidth,
+  window.outerHeight,
+  window.pageXOffset
+)
 
-//attribuites
-const animais = document.querySelector('.animais')
+const small = window.matchMedia('(max-width: 600')
 
-console.log(animais.attributes.class)
+if(small){
+  console.log('Usúario mobile')
+}else{
+  console.log("usuario desctop")
+}
 
-///
-const img = document.querySelector('img')
-
-const srcImg = img.getAttribute('src')
-
-img.setAttribute('alt', 'É uma raposa')
-const possuiAlt = img.hasAttribute('alt')
-
-console.log(possuiAlt)
+console.log(small)
