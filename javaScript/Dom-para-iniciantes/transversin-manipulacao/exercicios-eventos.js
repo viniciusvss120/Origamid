@@ -1,40 +1,31 @@
 //1
-const link = document.querySelectorAll('a[href^="#"]')
 
-function addClasse(event) {
-  event.preventDefault()
-  link.forEach((link) => {
-    link.classList.remove('ativo')
-  })
-  event.currentTarget.classList.toggle('ativo')
-}
-link.forEach((item) =>{
-  item.addEventListener('click', addClasse)
-})
+const menu = document.querySelector('.menu')
+const copy = document.querySelector('.copy')
+console.log(copy)
+
+const novoMenu = menu.cloneNode(true)
+
+copy.appendChild(novoMenu)
+
 
 //2
-const todosElementos = document.querySelectorAll('body *')
+const faqs = document.querySelector('.faq')
+const primeiroDt = faqs.querySelector('dt')
 
-function handleElemento(event){
-  console.log(event.currentTarget)
-}
-
-todosElementos.forEach((elemento) =>{
-  elemento.addEventListener('click', handleElemento)
-})
+console.log(primeiroDt)
 
 //3
-/*function handleElemento(event){
-  event.currentTarget.remove()
-}*/
+const proximoDD =  primeiroDt.nextElementSibling
+console.log(proximoDD)
 
 //4
 
-function handleClickT(event) {
-  console.log(event.key)
-  if(event.key === 't'){
-    document.documentElement.classList.toggle('textomaior')
-  }
-}
 
-window.addEventListener('keydown', handleClickT)
+const conteudoAnimal = document.querySelector('.animais')
+
+faqs.innerHTML = animais.innerHTML
+
+
+
+

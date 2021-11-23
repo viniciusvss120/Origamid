@@ -1,61 +1,37 @@
-/*
-const img = document.querySelector('img')
+//const h1 = document.querySelector('h1')
+const animaisLista = document.querySelector('.animais-descricao')
 
-function callback(event) {
-  console.log(event)
-}
+//console.log(h1.innerHTML = '<p>Novo Titulo</p>')
+//console.log(animaisLista.innerText)
 
-//img.addEventListener('click', callback)
+const lista = document.querySelector('.animais-lista')
 
-const imagensLista = document.querySelector('.animais-lista')
+//console.log(lista.previousElementSibling)
+//console.log(lista.children)
+//console.log(lista.querySelector('li:last-child'))
 
-function callbackLista(event) {
-  console.log(event.currentTarget)
-  console.log(event.target)
-  console.log(event.type)
-  
-}
+const animais = document.querySelector('.animais')
+const contato = document.querySelector('.contato')
+const titulo = contato.querySelector('.titulo')
 
-//imagensLista.addEventListener('click', callbackLista)
+const mapa = document.querySelector('.mapa')
 
+//contato.insertBefore(animais, mapa)
 
-const linkExterno = document.querySelector('a[href^="http"]')
+contato.replaceChild(mapa,titulo)
 
-function handleLinkExterno(event){
-  event.preventDefault()
-  console.log('clicou')
-  console.log(this)
-}
+const novoh1 = document.createElement('h1')
 
-linkExterno.addEventListener('click', handleLinkExterno)
+novoh1.innerText = 'Novo Titulo'
+novoh1.classList.add('titulo')
+
+//mapa.appendChild(novoh1)
 
 const h1 = document.querySelector('h1')
+const faq = document.querySelector('.faq')
 
-function handleEvent(event){
-  console.log(event.type, event)
-}
+const cloneH1 = h1.cloneNode(true)
 
-/*h1.addEventListener('click',handleEvent)
-h1.addEventListener('mouseenter',handleEvent)
-h1.addEventListener('mousemove',handleEvent)
+//cloneH1.classList.add('azul')
+//faq.appendChild(cloneH1)
 
-window.addEventListener('scroll', handleEvent)
-window.addEventListener('resize', handleEvent)*/
-
-function handleKeyboard(event) {
-  if(event.key === 'a'){
-    document.body.classList.toggle('azul')
-  }
-} 
-
-window.addEventListener('keydown', handleKeyboard)
-
-const imgs = document.querySelectorAll('img')
-
-function handleImg(event){
-  console.log(event.target.getAttribute('src'))
-}
-
-imgs.forEach((img) => {
-  img.addEventListener('click', handleImg)
-})
