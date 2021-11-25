@@ -27,7 +27,7 @@ console.log(fraseFinal)
 const fruta = 'Banana'
 const listaFruta = 'Melancia, Banana, Laranja'
 
-console.log(fruta.includes(fruta, 7))
+console.log(listaFruta.includes(fruta, 10))
 
 console.log(fruta.startsWith('Ba'))
 console.log(fruta.endsWith('na'))

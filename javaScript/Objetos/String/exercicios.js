@@ -24,5 +24,7 @@ const transacao = [
 ]
 
 transacao.forEach((item) =>{
-  const taxa =
+  item.valor = parseInt(item.valor)
+  console.log(item.valor)
 })
+
