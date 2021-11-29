@@ -75,6 +75,95 @@ const maiorNumero = numeros.reduce((anterior, atual) =>{
 },0)
 
 console.log(maiorNumero)
+/////
+const aulas1 = [
+    {
+        nome: 'HTML 1',
+        min: 15
+    },
+    {
+        nome: 'HTML 2',
+        min: 10
+    },
+    {
+        nome: 'CSS 1',
+        min: 20
+    },
+    {
+        nome: 'JS 1',
+        min: 25
+    }
+]
 
+const listaAulas = aulas1.reduce((acumulador, atual, index) =>{
+    acumulador[index] = atual.nome
+    return acumulador
+},{})
 
+console.log(listaAulas)
 
+///
+// some():
+
+const frutas = ['Banana', 'Pera', 'Uva']
+
+const temUva = frutas.some((item) => {
+    console.log(item)
+    return item === 'Uva'
+})
+
+console.log(temUva)
+
+///// every()
+const numeros = [6, 43, 22, 88, 101, 29]
+
+const maiorQue3 = numeros.every(n => n > 7)
+
+console.log(maiorQue3)
+
+///findIndex()
+const frutas2 = ['Banana', 'Pera', 'Uva']
+const indexUva = frutas2.findIndex(item =>{
+    return item === 'Uvas'
+})
+
+console.log(indexUva)
+
+/// filter(): retorna uma array com a lista dfer valors durante a sua interação
+
+const frutas3 = ['Banana', undefined, null, '', 'Uva', 0, 'Maçã']
+
+const arrayFrutas = frutas3.filter((item) => {
+    console.log(item)
+    return item 
+
+})
+
+console.log(arrayFrutas)
+
+//
+
+const aulas2 = [
+    {
+        nome: 'HTML 1',
+        min: 15
+    },
+    {
+        nome: 'HTML 2',
+        min: 10
+    },
+    {
+        nome: 'CSS 1',
+        min: 20
+    },
+    {
+        nome: 'JS 1',
+        min: 25
+    }
+]
+ const maiores15 = aulas2.filter((aula)=>{
+      return aula.min > 15
+     
+ })
+
+ console.log(maiores15)
