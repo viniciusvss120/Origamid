@@ -73,3 +73,24 @@ const filtro = Array.prototype.filter.call(li, (item) =>{
 })
 
 console.log(filtro)
+
+////// applay
+
+const numeros = [33, 23, 34, 4,346]
+
+console.log(Math.max.apply(null, numeros))
+
+///bind()
+
+const li2 = document.querySelectorAll('li')
+const arrayLi = Array.from(li)
+
+const filtro2 = Array.prototype.filter.bind(li,(item) => {
+    return item.classList.contains('ativo')
+
+
+})
+
+console.log(filtro2)
+//
+
