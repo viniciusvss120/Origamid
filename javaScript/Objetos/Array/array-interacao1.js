@@ -166,4 +166,4 @@ const aulas2 = [
      
  })
 
- console.log(maiores15)
+ console.log(maiores15[0].min)
