@@ -26,9 +26,8 @@ function substituirCPFS (cpfsElements){
   cpfsFormatados.forEach((element, index) =>{
     element.innerText = cpfsFormatados[index]
   })
-  
+  return cpfsFormatados
 
 }
-
-console.log(substituirCPFS(cpfs)) 
+substituirCPFS(cpfs)
 
