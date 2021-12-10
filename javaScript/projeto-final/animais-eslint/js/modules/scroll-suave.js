@@ -1,4 +1,7 @@
-export default function initScrollSuave() {
+export default class ScrollSuave {
+  constructor() {
+
+  }
   const linksInternos = document.querySelectorAll('[data-menu="suave"] a[href^="#"]');
 
   function scrollToSection(event) {
