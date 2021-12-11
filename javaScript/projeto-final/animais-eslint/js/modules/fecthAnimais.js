@@ -1,4 +1,4 @@
-import initAnimaNumero from './anima-numeros.js';
+import AnimaNumero from './anima-numeros.js';
 
 export default function initFetchAnimais() {
   function createAnimal(animal) {
@@ -17,7 +17,8 @@ export default function initFetchAnimais() {
         const divAnimal = createAnimal(animal);
         numerosGrid.appendChild(divAnimal);
       });
-      initAnimaNumero();
+      const animaNumeros = new AnimaNumero('[data-numero]', '.numero', 'ativo');
+      animaNumeros.init();
     } catch (erro) {
       console.log(erro);
     }
