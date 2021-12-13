@@ -1,6 +1,7 @@
 export default class Accordion {
   constructor(list) {
     this.accordionList = document.querySelectorAll(list);
+    console.log(this.accordionList);
     this.ativoClass = 'ativo';
   }
 
@@ -12,7 +13,7 @@ export default class Accordion {
 
   addAccordionEvent() {
     this.accordionList.forEach((item) => {
-      item.addEventListener('click', this.toggleAccordion);
+      item.addEventListener('click', () => this.toggleAccordion(item));
     });
   }
   // iniciar função
