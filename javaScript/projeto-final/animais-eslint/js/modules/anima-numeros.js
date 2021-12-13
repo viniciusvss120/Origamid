@@ -1,9 +1,10 @@
-import initAnimacaoScroll from "./scroll-animacao";
 export default class AnimaNumero {
   constructor(numeros, observerTarget, observerClass) {
     this.numeros = document.querySelectorAll(numeros);
     this.observerTarget = document.querySelector(observerTarget);
     this.observerClass = observerClass;
+
+    this.handleMutation = this.handleMutation.bind(this);
   }
   // Recebe um elemento do dom, com nímero em seu texto
   // incrementa a parti de 0 até o npumero final
@@ -28,17 +29,26 @@ export default class AnimaNumero {
     this.numeros.forEach((numero) => this.constructor.incrementarNumero(numero));
   }
 
+  // Função que ocorre quando a mutação ocorrer
   handleMutation(mutation) {
     if (mutation[0].target.classList.contains(this.observerClass)) {
       this.observer.disconnect();
-      animaNumeros();
+      this.animaNumeros();
     }
   }
+
+  // adiciona o mutationObserver para verificar quando a classe ativo é adicionada ao element target
+
   addMutationObserver() {
     this.observer = new MutationObserver(this.handleMutation);
     this.observer.observe(this.observerTarget, { attributes: true });
   }
+
   init() {
-    this.animaNumeros
+    if (this.numeros.length && this.observerTarget) {
+      this.addMutationObserver();
+    }
+    this.animaNumeros();
+    return this;
   }
 }
