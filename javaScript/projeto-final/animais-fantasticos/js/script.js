@@ -9,7 +9,7 @@ import Funcionamento from './modules/funcionamento.js';
 import fetchAnimais from './modules/fecthAnimais.js';
 import fetchBitcoin from './modules/fetch-bitcoin.js';
 import MenuMobile from './modules/menu-mobile.js';
-import { SlideNav } from './modules/slide.js';
+import SlideNav from './modules/slide.js';
 
 const scrollSuave = new ScrollSuave('[data-menu="suave"] a[href^="#"]');
 scrollSuave.init();
